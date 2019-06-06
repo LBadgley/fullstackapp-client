@@ -1,6 +1,6 @@
 import { ADD_PHOTO, REMOVE_PHOTO } from '../actions/photoAction';
 
-const initialState = {};
+const initialState = [];
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {

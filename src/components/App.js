@@ -2,8 +2,9 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  // Route
+  Route
 } from 'react-router-dom';
+import HomeContainer from '../containers/HomeContainer';
 // import { Home } from '../containers/Home';
 // import PhotoAlbum from '../containers/PhotoAlbum';
 
@@ -15,7 +16,7 @@ export default function App() {
       {/* <Header /> */}
       <Router>
         <Switch>
-          {/* <Route exact path='/' component={Home}/> */}
+          <Route exact path='/' component={HomeContainer}/>
           {/* <Route path='/photoUrl' component={PhotoDetail} /> */}
         </Switch>
       </Router>

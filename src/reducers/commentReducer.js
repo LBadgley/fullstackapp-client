@@ -1,6 +1,6 @@
 import { ADD_COMMENT } from '../actions/commentAction';
 
-const initialState = {};
+const initialState = [];
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
@@ -12,5 +12,7 @@ export default function reducer(state = initialState, action) {
           action.payload.text
         ]
       };
+    default:
+      return state;
   }
 }
