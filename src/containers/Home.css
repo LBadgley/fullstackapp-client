@@ -1,7 +1,7 @@
 body {
   background-color: #FABC3C;
 }
-
+/* make header p flex: 2, and flex span flex 1 */
 header p, span {
   display: flex;
   justify-content: center;
@@ -17,10 +17,13 @@ form {
   padding: 25px;
 }
 input {
+  display: flex;
   font-size: 1.2rem;
 }
 
-#photoAlbum {
+.photoAlbum {
+  display: flex;
+  justify-content: space-around;
   border: 2px solid black;
   border-radius: 5%;
   background-color: white;

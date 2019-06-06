@@ -1,21 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
-function Header(props) {
+export function Header() {
   return (
     <>
-      
+      <h1>Photomaton Photo Service</h1>
     </>
   );
 }
 
-Header.propTypes = {
-  previousPage: PropTypes.func.isRequired,
-  nextPage: PropTypes.func.isRequired
-};
-
-// export default connect(
-//   null,
-//   mapDispatchToProps
-// )(Header);
+export default connect(
+  null,
+)(Header);

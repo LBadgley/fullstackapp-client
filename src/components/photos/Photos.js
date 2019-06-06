@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import Photo from './Photo';
 
 function Photos({ photos }) {
-  const photosArray = photos.map(photo => {
-    return (
-      <li key={photo._id}>
-        <Photo photo={photo} />
-      </li>
-    );
-  });
+  const photosArray = () => {
+    if(photos) {
+      photos.map((photo) => (
+        <li key={photo._id}>
+          <Photo photo={photo} />
+        </li>
+      ));
+    } else return null;
+  };
 
   return (
     <ul>
