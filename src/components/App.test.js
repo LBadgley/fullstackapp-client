@@ -6,5 +6,5 @@ describe('app tests', () => {
   it('renders the app', () => {
     const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
-  })
-})
+  });
+});

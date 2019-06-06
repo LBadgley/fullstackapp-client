@@ -1,0 +1,35 @@
+body {
+  background-color: #FABC3C;
+}
+
+header p, span {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: -10px;
+}
+
+form {
+  border: 2px #F19143 dashed;
+  border-radius: 5%;
+  background-color: #F4D35E;
+  margin: 10px;
+  padding: 25px;
+}
+input {
+  font-size: 1.2rem;
+}
+
+#photoAlbum {
+  border: 2px solid black;
+  border-radius: 5%;
+  background-color: white;
+  color: black;
+  width: 550px;
+  height: 550px;
+}
+
+img{
+  height: 200px;
+  width: auto;
+}

@@ -4,17 +4,19 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Header from './Header';
+import { Home } from '../containers/Home';
+// import Header from './Header';
+
 export default function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Router>
         <Switch>
-          <Route />
-          <Route />
+          <Route exact path='/' component={Home}/>
+          {/* <Route path='/photo' /> */}
         </Switch>
       </Router>
     </>
-  )
+  );
 }
