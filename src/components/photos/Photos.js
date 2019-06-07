@@ -3,15 +3,9 @@ import PropTypes from 'prop-types';
 import Photo from './Photo';
 
 function Photos({ photos }) {
-  const photosArray = () => {
-    if(photos) {
-      photos.map((photo) => (
-        <li key={photo._id}>
-          <Photo photo={photo} />
-        </li>
-      ));
-    } else return null;
-  };
+  const photosArray = photos.map((photo, i) => (
+    <Photo key={i} photo={photo} />
+  ));
 
   return (
     <ul>
@@ -19,7 +13,6 @@ function Photos({ photos }) {
     </ul>
   );
 }
-
 Photos.propTypes = {
   photos: PropTypes.array
 };

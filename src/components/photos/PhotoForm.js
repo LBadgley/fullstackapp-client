@@ -1,12 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-export default class CommentForm extends PureComponent {
+export default class PhotoForm extends PureComponent {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired
   }
 
   state = {
+    photos: [],
     imageUrl: '',
     caption: ''
   }
@@ -16,18 +17,18 @@ export default class CommentForm extends PureComponent {
 
     const { photoUrl } = this.state;
     this.props.onSubmit(photoUrl);
-    this.ListeningStateChangedEvent({ imageUrl: '', caption: '' });
+    this.setState({ imageUrl: '', caption: '' });
   }
-  updatePhoto = ({ target }) => {
-    this.setState({ photoUrl: target.value });
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
   }
 
   render() {
     const { imageUrl, caption } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <input name="imageUrl" value={imageUrl} onChange={this.handleChange} />
-        <input name="caption" value={caption} onChange={this.handleChange} />
+        <input name="imageUrl" value={imageUrl} onChange={this.handleChange} placeholder="Paste your URL here"/>
+        <input name="caption" value={caption} onChange={this.handleChange} placeholder="Caption your photo"/>
         <button>Submit!</button>
       </form>
     );

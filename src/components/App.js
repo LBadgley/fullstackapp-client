@@ -5,10 +5,8 @@ import {
   Route
 } from 'react-router-dom';
 import HomeContainer from '../containers/HomeContainer';
-// import { Home } from '../containers/Home';
 // import PhotoAlbum from '../containers/PhotoAlbum';
-
-// import Header from './Header';
+import PhotoDetail from '../components/photos/PhotoDetails';
 
 export default function App() {
   return (
@@ -17,7 +15,7 @@ export default function App() {
       <Router>
         <Switch>
           <Route exact path='/' component={HomeContainer}/>
-          {/* <Route path='/photoUrl' component={PhotoDetail} /> */}
+          <Route path='/photoUrl' component={PhotoDetail} />
         </Switch>
       </Router>
     </>

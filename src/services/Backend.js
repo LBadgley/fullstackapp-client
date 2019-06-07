@@ -1,5 +1,5 @@
 export const postPhoto = (data) => {
-  return fetch('http://localhost:7890/api/v1', { 
+  return fetch('http://ec2-18-222-214-151.us-east-2.compute.amazonaws.com:7890/api/v1', { 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ export const postPhoto = (data) => {
 };
 
 export const getPhoto = (data) => {
-  return fetch('http://localhost:7890/api/v1', {
+  return fetch('http://ec2-18-222-214-151.us-east-2.compute.amazonaws.com:7890/api/v1/photo', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'

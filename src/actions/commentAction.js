@@ -6,4 +6,5 @@ export const addComment = (text, photoUrl) => ({
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const removeComment = (commentId) => ({
   type: REMOVE_COMMENT, 
+  payload: { commentId }
 });

@@ -1,9 +1,9 @@
-export const getPhotos = state => {
-  return state.photos;
+export const getComments = state => {
+  return state.comments;
 };
 
-export const getPhoto = (state, imageUrl) => {
-  return state.photos.find(photo => {
-    return photo.imageUrl === imageUrl;
+export const getComment = (state, imageUrl) => {
+  return state.comments.find(comment => {
+    return comment.imageUrl === imageUrl;
   });
 };
