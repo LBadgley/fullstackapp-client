@@ -15,8 +15,8 @@ export default class PhotoForm extends PureComponent {
   handleSubmit = event => {
     event.preventDefault();
 
-    const { photoUrl } = this.state;
-    this.props.onSubmit(photoUrl);
+    const { imageUrl, caption } = this.state;
+    this.props.onSubmit({ imageUrl, caption });
     this.setState({ imageUrl: '', caption: '' });
   }
   handleChange = ({ target }) => {
