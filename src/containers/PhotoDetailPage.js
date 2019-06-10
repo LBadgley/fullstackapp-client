@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+/*/import { connect } from 'react-redux';
 import PhotoDetails from '../components/photos/PhotoDetails';
 import addComment from '../actions/commentAction';
 import { getComments } from '../selectors/commentSelector';
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch, { postId }) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PhotoDetails);
+)(PhotoDetails); /*/
